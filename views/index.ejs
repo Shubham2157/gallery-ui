@@ -1,0 +1,27 @@
+<Html>
+    <Head>
+        <title>Photo gallery</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <!------ Include the above in your HEAD tag ---------->
+    </Head>
+
+    <Body>
+        <ul class="gallery_box">
+            <% result.forEach((item)=>{ %>
+                <li>
+                    <a href="<%= item["dowUrl"] %>"><img src="<%= item["imgUrl"] %>">
+                    <div class="box_data">
+                        <span><%= item["imgName"] %> </span>
+                    </div></a>
+                </li>
+            <% }) %>
+        </ul>
+        
+    </Body>
+</Html>
+
+
+
